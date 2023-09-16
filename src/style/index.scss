@@ -187,10 +187,14 @@ table {
 .sidebar-module li {
   height: 50px;
   /* background: red; */
-  margin-top: 10px;
+  /* margin-top: 10px; */
   lyst-style: none;
   display: flex;
   align-items: center;
+}
+
+.sidebar-module .nav-link {
+  margin-top: 10px;
 }
 
 .sidebar-module {
@@ -255,7 +259,7 @@ table {
 
 
 
-.sidebar-module .menu .menu-links li a:hover {
+.sidebar-module .menu .menu-links .nav-link a:hover {
   background: var(--prymary-color);
 }
 
@@ -352,17 +356,16 @@ Header .header-text .module-text {
 }
 
 .menu .sub-menu {
-  padding: 6px 6px 14px 40px;
-  margin-top: -10px;
+  margin-top: -7px;
   background-color: var(--prymary-color);
   border-radius: 6px;
 }
 
 
 .menu .sub-menu a{
+  padding: 6px 6px 14px 40px;
   color: #fff;
   font-size: 15px;
-  padding: 5px 0;
   white-space: nowrap;
 }
 
@@ -372,6 +375,11 @@ Header .header-text .module-text {
 
 .menu-links.close .sub-menu {
   display: none;
+}
+
+.menu .sub-menu a:hover {
+  background-color: var(--hover-prymary-color);
+  /* color: var(--primary-color); */
 }
 
 .menu-bar .mode {
