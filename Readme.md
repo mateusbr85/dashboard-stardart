@@ -1,5 +1,5 @@
 
-# Aplicação de Estudos, criada com Node.js e TypeScript
+# Dashboard de estudos, criado com Vite.js, React.js e Typescript
 
 Esse Dashboard foi feito com Css nativo e com Rsuite para alçguns componentes, mas sua estrutura principal contem CSS e HTML
 
