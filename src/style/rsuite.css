@@ -1149,7 +1149,7 @@ html {
 }
 body {
   font-family: Apple-System, Arial, Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', STXihei, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   color: #575757;
   color: var(--rs-text-primary);
@@ -1731,7 +1731,7 @@ tbody.rs-anim-collapse.rs-anim-in {
 .rs-avatar-sm {
   width: 30px;
   height: 30px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .rs-avatar-sm > .rs-icon {
   font-size: 22px;
@@ -1894,7 +1894,7 @@ tbody.rs-anim-collapse.rs-anim-in {
   background-color: #f7f7fa;
   background-color: var(--rs-btn-default-bg);
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   padding: 8px 12px;
   overflow: hidden;
@@ -2582,7 +2582,7 @@ tbody.rs-anim-collapse.rs-anim-in {
   border-left: var(--rs-btn-default-border, none);
 }
 .rs-btn-md {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   padding: 8px 12px;
 }
@@ -2621,7 +2621,7 @@ tbody.rs-anim-collapse.rs-anim-in {
   border-left: var(--rs-btn-default-border, none);
 }
 .rs-btn-sm {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   padding: 5px 10px;
 }
@@ -3300,7 +3300,7 @@ tbody.rs-anim-collapse.rs-anim-in {
 }
 .rs-calendar-table-cell-content {
   display: inline-block;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   padding: 5px;
   cursor: pointer;
@@ -3429,7 +3429,7 @@ tbody.rs-anim-collapse.rs-anim-in {
 }
 .rs-calendar-month-dropdown-cell-content {
   display: inline-block;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   padding: 5px;
   cursor: pointer;
@@ -3514,7 +3514,7 @@ tbody.rs-anim-collapse.rs-anim-in {
   padding-bottom: 2px;
 }
 .rs-calendar-time-dropdown-cell {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   color: inherit;
   padding: 5px;
@@ -4293,7 +4293,7 @@ label:hover .rs-checkbox-wrapper .rs-checkbox-inner::before {
 }
 .rs-check-tree-node {
   position: relative;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 22px;
 }
 .rs-check-tree-node .rs-check-item {
@@ -4364,7 +4364,7 @@ label:hover .rs-checkbox-wrapper .rs-checkbox-inner::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 14px;
+  font-size: 12px;
 }
 .rs-check-tree-node-children > .rs-check-tree-children {
   position: relative;
@@ -4601,7 +4601,7 @@ label:hover .rs-checkbox-wrapper .rs-checkbox-inner::before {
 }
 .rs-picker-daterange-header {
   padding: 8px 12px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   border-bottom: 1px solid #e5e5ea;
   border-bottom: 1px solid var(--rs-border-primary);
@@ -5000,7 +5000,7 @@ label:hover .rs-checkbox-wrapper .rs-checkbox-inner::before {
 .rs-dropdown-toggle.rs-btn-lg .rs-dropdown-toggle-caret {
   top: 10px;
   right: 16px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .rs-dropdown-toggle.rs-btn-sm {
   padding-right: 30px !important;
@@ -5032,7 +5032,7 @@ label:hover .rs-checkbox-wrapper .rs-checkbox-inner::before {
 .rs-dropdown-menu {
   margin: 0;
   list-style: none;
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
   background-color: #fff;
   background-color: var(--rs-bg-overlay);
@@ -5685,7 +5685,7 @@ label:hover .rs-checkbox-wrapper .rs-checkbox-inner::before {
   display: inline-block;
   min-height: 20px;
   line-height: 1.42857143;
-  font-size: 14px;
+  font-size: 12px;
   padding: 8px 0;
   width: 170px;
   margin-right: 12px;
@@ -7950,7 +7950,7 @@ label:hover .rs-checkbox-wrapper .rs-checkbox-inner::before {
   border-radius: 6px;
   /* stylelint-disable */
   padding: 7px 11px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   /* stylelint-enable */
 }
@@ -8037,7 +8037,7 @@ textarea.rs-input-lg {
 .rs-input-sm {
   /* stylelint-disable */
   padding: 4px 11px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   /* stylelint-enable */
 }
@@ -8207,7 +8207,7 @@ textarea.rs-input-sm {
   opacity: 0.5;
 }
 .rs-input-group.rs-input-group-inside .rs-input-group-btn > .rs-icon {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
 }
 .rs-input-group.rs-input-group-inside .rs-input-group-btn:focus {
@@ -8297,7 +8297,7 @@ textarea.rs-input-group-lg > .rs-input {
 .rs-input-group-md > .rs-input {
   /* stylelint-disable */
   padding: 7px 11px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   /* stylelint-enable */
 }
@@ -8328,7 +8328,7 @@ textarea.rs-input-group-md > .rs-input {
 .rs-input-group-sm > .rs-input {
   /* stylelint-disable */
   padding: 4px 11px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   /* stylelint-enable */
 }
@@ -8404,7 +8404,7 @@ textarea.rs-input-group.rs-input-group-lg > .rs-input-group-addon {
 .rs-input-group.rs-input-group-md > .rs-input-group-addon {
   /* stylelint-disable */
   padding: 7px 11px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   /* stylelint-enable */
   min-width: 36px;
@@ -8422,7 +8422,7 @@ textarea.rs-input-group.rs-input-group-md > .rs-input-group-addon {
 .rs-input-group.rs-input-group-sm > .rs-input-group-addon {
   /* stylelint-disable */
   padding: 4px 11px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   /* stylelint-enable */
   min-width: 32px;
@@ -8479,7 +8479,7 @@ textarea.rs-input-group-inside.rs-input-group-lg > .rs-input-group-btn {
 }
 .rs-input-group-inside.rs-input-group-md > .rs-input-group-btn {
   /* stylelint-disable */
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   /* stylelint-enable */
   height: 34px;
@@ -8495,13 +8495,13 @@ textarea.rs-input-group-inside.rs-input-group-md > .rs-input-group-btn {
   height: auto;
 }
 .rs-input-group-inside.rs-input-group-md > .rs-input-group-btn > .rs-icon {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
 }
 .rs-input-group-inside.rs-input-group-sm > .rs-input-group-btn {
   /* stylelint-disable */
   padding: 4px 11px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   /* stylelint-enable */
   height: 28px;
@@ -8562,7 +8562,7 @@ textarea.rs-input-group-inside.rs-input-group-xs > .rs-input-group-btn {
   color: #575757;
   color: var(--rs-text-primary);
   padding: 8px 12px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: normal;
   line-height: 1;
   text-align: center;
@@ -8777,7 +8777,7 @@ textarea.rs-input-group-inside.rs-input-group-xs > .rs-input-group-btn {
 .rs-picker-search-input {
   /* stylelint-disable */
   padding: 7px 11px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   /* stylelint-enable */
   background: none;
@@ -8796,7 +8796,7 @@ textarea.rs-picker-search-input {
   height: auto;
 }
 .rs-picker-tag .rs-picker-search-input {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   padding: 2px 12px 2px 11px;
 }
@@ -9111,7 +9111,7 @@ textarea.rs-picker-search-input {
   height: 36px;
 }
 .rs-loader-md .rs-loader-content {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 2.57142857;
 }
 .rs-loader-md .rs-loader-vertical .rs-loader-md .rs-loader {
@@ -9130,7 +9130,7 @@ textarea.rs-picker-search-input {
   height: 18px;
 }
 .rs-loader-sm .rs-loader-content {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.28571429;
 }
 .rs-loader-sm .rs-loader-vertical .rs-loader-sm .rs-loader {
@@ -9303,7 +9303,7 @@ textarea.rs-picker-search-input {
 }
 .rs-message {
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   position: relative;
   -webkit-animation-fill-mode: forwards;
@@ -10236,7 +10236,7 @@ textarea.rs-picker-search-input {
 }
 .rs-pagination-group-md,
 .rs-pagination-group-sm {
-  font-size: 14px;
+  font-size: 12px;
 }
 .rs-pagination-group-xs {
   font-size: 12px;
@@ -10314,7 +10314,7 @@ textarea.rs-picker-search-input {
   padding: 9px 15px;
 }
 .rs-pagination-md .rs-pagination-btn {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   padding: 8px 12px;
   min-width: 36px;
@@ -10357,7 +10357,7 @@ textarea.rs-picker-search-input {
   padding: 7px 11px;
 }
 .rs-pagination-sm .rs-pagination-btn {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   padding: 5px 10px;
   min-width: 30px;
@@ -10469,7 +10469,7 @@ textarea.rs-picker-search-input {
   color: var(--rs-btn-subtle-text);
   background-color: transparent;
   border: none;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   padding: 5px 10px;
   margin: 0 2px;
@@ -10934,7 +10934,7 @@ textarea.rs-picker-search-input {
   background-color: #f7f7fa;
   background-color: var(--rs-btn-default-bg);
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   padding: 8px 12px;
   overflow: hidden;
@@ -11185,7 +11185,7 @@ textarea.rs-picker-search-input {
 }
 .rs-picker-input:not(.rs-picker-tag) .rs-picker-toggle.rs-btn ~ .rs-picker-tag-wrapper .rs-picker-search-input {
   padding: 7px 12px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
 }
 .rs-picker-tag .rs-picker-toggle.rs-btn ~ .rs-picker-tag-wrapper {
@@ -11197,7 +11197,7 @@ textarea.rs-picker-search-input {
 .rs-picker-tag .rs-picker-toggle.rs-btn ~ .rs-picker-tag-wrapper .rs-picker-search-input {
   padding-left: 12px;
   margin-top: 5px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .rs-picker-tag .rs-picker-toggle.rs-btn ~ .rs-picker-tag-wrapper input {
   height: 18px;
@@ -11355,7 +11355,7 @@ textarea.rs-picker-search-input {
 }
 .rs-picker-input:not(.rs-picker-tag) .rs-picker-toggle.rs-btn-md ~ .rs-picker-tag-wrapper .rs-picker-search-input {
   padding: 7px 12px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
 }
 .rs-picker-tag .rs-picker-toggle.rs-btn-md ~ .rs-picker-tag-wrapper {
@@ -11367,7 +11367,7 @@ textarea.rs-picker-search-input {
 .rs-picker-tag .rs-picker-toggle.rs-btn-md ~ .rs-picker-tag-wrapper .rs-picker-search-input {
   padding-left: 12px;
   margin-top: 5px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .rs-picker-tag .rs-picker-toggle.rs-btn-md ~ .rs-picker-tag-wrapper input {
   height: 18px;
@@ -11400,7 +11400,7 @@ textarea.rs-picker-search-input {
   padding-bottom: 7px;
 }
 .rs-picker-toggle.rs-btn-sm {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   padding: 5px 10px;
 }
@@ -11458,7 +11458,7 @@ textarea.rs-picker-search-input {
 }
 .rs-picker-input:not(.rs-picker-tag) .rs-picker-toggle.rs-btn-sm ~ .rs-picker-tag-wrapper .rs-picker-search-input {
   padding: 4px 10px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
 }
 .rs-picker-tag .rs-picker-toggle.rs-btn-sm ~ .rs-picker-tag-wrapper {
@@ -11470,7 +11470,7 @@ textarea.rs-picker-search-input {
 .rs-picker-tag .rs-picker-toggle.rs-btn-sm ~ .rs-picker-tag-wrapper .rs-picker-search-input {
   padding-left: 10px;
   margin-top: 2px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .rs-picker-tag .rs-picker-toggle.rs-btn-sm ~ .rs-picker-tag-wrapper input {
   height: 18px;
@@ -11789,7 +11789,7 @@ textarea.rs-picker-search-input {
   border-radius: 6px;
   /* stylelint-disable */
   padding: 7px 11px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
   /* stylelint-enable */
   min-width: 200px;
@@ -11846,7 +11846,7 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
   width: 14px;
   color: #8e8e93;
   color: var(--rs-text-secondary);
-  font-size: 14px;
+  font-size: 12px;
   height: 20px;
   top: 14px;
   right: 24px;
@@ -12078,7 +12078,7 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
   z-index: 1060;
   display: none;
   padding: 12px;
-  font-size: 14px;
+  font-size: 12px;
   background-color: #fff;
   background-color: var(--rs-bg-overlay);
   background-clip: padding-box;
@@ -12136,7 +12136,7 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
 }
 .rs-popover-title {
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.42857143;
 }
 .rs-popover-content {
@@ -12619,7 +12619,7 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
 .rs-progress-line .rs-progress-icon-success,
 .rs-progress-line .rs-progress-icon-fail {
   line-height: 0;
-  font-size: 14px;
+  font-size: 12px;
 }
 .rs-progress-circle .rs-progress-icon-success,
 .rs-progress-circle .rs-progress-icon-fail {
@@ -12870,7 +12870,7 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
   background-color: #f7f7fa;
   background-color: var(--rs-btn-default-bg);
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   padding: 8px 12px;
   overflow: hidden;
@@ -14246,7 +14246,7 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
   position: relative;
 }
 .rs-steps-item-icon-wrapper > .rs-steps-item-icon .rs-icon {
-  font-size: 14px;
+  font-size: 12px;
   vertical-align: middle;
 }
 .rs-steps-item-content {
@@ -14379,11 +14379,11 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
 .rs-steps-small .rs-steps-item-icon-wrapper {
   width: 24px;
   height: 24px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.57142857;
 }
 .rs-steps-small .rs-steps-item-title {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71428571;
 }
 .rs-steps-small .rs-steps-item-description {
@@ -14852,7 +14852,7 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
 }
 .rs-tag-lg {
   padding: 5px 10px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .rs-tag-lg .rs-tag-icon-close {
   padding: 9px 8px;
@@ -15439,10 +15439,10 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
   margin-right: 10px;
   height: 30px;
   line-height: 2.14285714;
-  font-size: 14px;
+  font-size: 12px;
 }
 .rs-toggle-lg .rs-toggle-inner .rs-icon {
-  font-size: 14px;
+  font-size: 12px;
 }
 .rs-toggle-lg.rs-toggle-checked .rs-toggle-presentation::after {
   left: 100%;
@@ -15758,7 +15758,7 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
   padding-left: 16px;
   display: inline-block;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 22px;
 }
 .rs-tree-node-label-content {
@@ -15911,7 +15911,7 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 14px;
+  font-size: 12px;
 }
 .rs-tree-node-children > .rs-tree-children {
   position: relative;
@@ -16161,7 +16161,7 @@ textarea.rs-picker-menu .rs-picker-search-bar .rs-picker-search-bar-input {
   color: var(--rs-btn-default-text);
   background-color: #f7f7fa;
   background-color: var(--rs-btn-default-bg);
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   padding: 8px 12px;
   overflow: hidden;

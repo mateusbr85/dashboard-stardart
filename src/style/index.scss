@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap");
 @import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+@import '../components/browserlist/style.scss';
+
+
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 :root {
@@ -175,7 +178,7 @@ table {
 }
 
 .sidebar-module .image {
-  min-width:83px;
+  min-width:75px;
   display: flex;
   align-items: center;
 
@@ -265,6 +268,7 @@ table {
 
 .sidebar-module .menu.click .menu-links .icon-link {
   background: var(--prymary-color);
+  border-radius: 6px;
 }
 
 .sidebar-module .menu.click .menu-links .icon-link .text  {
@@ -284,7 +288,7 @@ table {
 
 
 .sidebar-module .image-text img {
-  width: 60px;
+  width: 45px;
   border-radius: 6px;
 }
 
@@ -328,7 +332,7 @@ Header .header-text .module-text {
 
 .sidebar-module .menu-bar {
   /* background-color: red; */
-  height: calc(100% - 50px);
+  height: calc(100% - 90px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -456,6 +460,17 @@ Header .header-text .module-text {
   border-radius: 0px 0px 0px 10px;
 }
 
+.browselize-list {
+  background-color: var(--sidebar-color);
+  padding-left: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 0px 10px;
+  margin-top: 2vh;
+  height: 95%;
+}
+
 .header .avatar-header {
   display: flex;
   background-color: #F2F1F1;
@@ -469,6 +484,25 @@ Header .header-text .module-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.avatar-header {
+  .text-header {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 40px;
+    .name {
+      font-weight: bold;
+      font-size: 13px;
+    }
+    .function {
+      font-size: 11px;
+    }
+  }
+  .avatar-image {
+    cursor: pointer;
+  }
 }
 
 .avatar-header .text .name {

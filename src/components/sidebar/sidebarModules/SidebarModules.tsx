@@ -9,6 +9,9 @@ import {
   Header,
   InputGroup,
   Input,
+  Divider,
+  Col,
+  Row,
 } from "rsuite";
 import config from "../../configModules";
 import { AxiosSearchPicker } from "../../formFields/AxiosSearchPicker";
@@ -59,6 +62,7 @@ const SidebarModules = ({ ...props }: SidebarModulesProps) => {
   const [modules, setModules] = useState<moduleContent>([]);
   const [menus, setMenus] = useState<menuContent>([]);
   const [subMenus, setSubMenus] = useState<[]>([]);
+  const [toogle, setToogle] = useState<string>('fas fa-chevron-left fa-lg toogle')
 
   // useEffect
   useEffect(() => {
@@ -73,6 +77,11 @@ const SidebarModules = ({ ...props }: SidebarModulesProps) => {
 
   // functions
   const resizeSidebar = () => {
+    if(!isClosed) {
+      setToogle('fas fa-chevron-right fa-lg toogle')
+    }else {
+      setToogle('fas fa-chevron-left fa-lg toogle')
+    }
     setIsClosed(!isClosed);
   };
 
@@ -182,14 +191,15 @@ const SidebarModules = ({ ...props }: SidebarModulesProps) => {
               <span className="module-text">Menus</span>
             </div>
           </div>
+          <Divider></Divider>
           {props.type == "dashboard" && (
             <div onClick={(e) => resizeSidebar()}>
-              <i className="fas fa-chevron-right fa-lg toogle"></i>
+              <i className={toogle}></i>
             </div>
           )}
         </Header>
         <div className="menu-bar">
-          <div className={!isClosedMenu ? "menu" : "menu click"}>
+          <Row className={!isClosedMenu ? "menu" : "menu click"}>
             {props.type == "dashboard" && (
               <>
                 <li className="nav-link">
@@ -203,9 +213,9 @@ const SidebarModules = ({ ...props }: SidebarModulesProps) => {
             {props.type == "modules" && (
               <div className="menu-modules">{isRenderModules()}</div>
             )}
-          </div>
+          </Row>
           {props.type == "dashboard" && (
-            <div className="bottom-content">
+            <Row className="bottom-content">
               <li className="mode">
                 <div
                   className="Modules-tolkit"
@@ -220,7 +230,7 @@ const SidebarModules = ({ ...props }: SidebarModulesProps) => {
                 </div>
                 <span className="mode-text">{moduleDestini}</span>
               </li>
-            </div>
+            </Row>
           )}
         </div>
       </Nav>

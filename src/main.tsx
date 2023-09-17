@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './style/index.scss'
-import 'rsuite/dist/rsuite.min.css';
+// import 'rsuite/dist/rsuite.min.css';
+import './style/rsuite.css';
 import 'react-toastify/dist/ReactToastify.css';
 // import '@fortawesome/fontawesome-svg-core/styles.css'
 // import 'rsuite/dist/rsuite.min.css';
