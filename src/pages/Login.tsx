@@ -9,7 +9,6 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   // UseStates
   const [values, setValues]:any = useState({});
-  const [userAuth, setUserAuth] = useContext(AuthContext)
   const navigate = useNavigate()
 
   // FunctionSetValues
@@ -48,7 +47,6 @@ const Login = () => {
         data: {...values}
       })
       .then((res) =>{
-        console.log(res.data)
         localStorage.setItem('token', res.data.response.token);
         localStorage.setItem('menu', JSON.stringify(res.data.response.menus))
         // setUserAuth({user: res.data.response.user, menu: res.data.response.menu, isAuth: true})

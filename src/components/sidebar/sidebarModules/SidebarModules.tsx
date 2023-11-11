@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import FooterSidebar from "../FooterSidebar";
-import { useNavigate, NavigateFunction } from "react-router-dom";
+import { useNavigate, NavigateFunction, Link  } from "react-router-dom";
 import {
   Tooltip,
   Whisper,
@@ -20,6 +20,7 @@ import { AuthContext } from "../../../context/AuthContext";
 
 interface SidebarModulesProps {
   type: "dashboard" | "modules";
+  routerNavigate: (router:string) => void;
 }
 
 type moduleContent = {
@@ -58,11 +59,12 @@ const SidebarModules = ({ ...props }: SidebarModulesProps) => {
   const [isClosedMenu, setIsClosedMenu]  = useState<boolean>(false);
   const [moduleDestini, setModuleDestini] = useState<string>("");
   const isLocation: string = location.pathname.split("/").slice(-1).toString();
-  const [userAuth, setUserAuth] = useContext(AuthContext);
   const [modules, setModules] = useState<moduleContent>([]);
   const [menus, setMenus] = useState<menuContent>([]);
   const [subMenus, setSubMenus] = useState<[]>([]);
+  const [moduleUrl, setModuleUrl] = useState('')
   const [toogle, setToogle] = useState<string>('fas fa-chevron-left fa-lg toogle')
+  
 
   // useEffect
   useEffect(() => {
@@ -94,6 +96,7 @@ const SidebarModules = ({ ...props }: SidebarModulesProps) => {
       const labelModules = config.modules[i].label;
       const urlModules = config.modules[i].url;
       if (urlModules == isLocation) {
+        setModuleUrl(urlModules)
         setModuleDestini(labelModules);
       }
     }
@@ -128,7 +131,7 @@ const SidebarModules = ({ ...props }: SidebarModulesProps) => {
     const output: any = [];
     for(let i in data){
       output.push(
-        <li key={i} onClick={() => navigate(`${data[i].sub_menu_slug}`)}>
+        <li key={i}  onClick={() => props.routerNavigate(`/dashboard/${moduleUrl}/${data[i].sub_menu_slug}`)}>
           <a>
             {data[i].sub_menu_text_name}
           </a>
@@ -165,7 +168,7 @@ const SidebarModules = ({ ...props }: SidebarModulesProps) => {
       }else {
         output.push(
           <>
-            <li key={itensMenu.menu_id} className="nav-link" onClick={() => navigate(`${itensMenu.menu_slug}`)}>
+            <li key={itensMenu.menu_id} className="nav-link" onClick={() => props.routerNavigate(`/dashboard/${moduleUrl}/${itensMenu.menu_slug}`)}>
               <a>
                 <i className={itensMenu.menu_icon}></i>
                 <span className="text">{itensMenu.menu_text_name}</span>
@@ -205,7 +208,7 @@ const SidebarModules = ({ ...props }: SidebarModulesProps) => {
                 <li className="nav-link">
                   <AxiosSearchPicker placeholder={"Pesquisar"} />
                 </li>
-                <ul className={isClosedMenu ? "menu-links" : "menu-links close"}>
+                <ul key={props.type} className={isClosedMenu ? "menu-links" : "menu-links close"}>
                   {isRenderMenuItens()}
                 </ul>
               </>
