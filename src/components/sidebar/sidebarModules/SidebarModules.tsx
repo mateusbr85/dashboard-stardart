@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import FooterSidebar from "../FooterSidebar";
-import { useNavigate, NavigateFunction, Link  } from "react-router-dom";
+import { useNavigate, NavigateFunction, Link } from "react-router-dom";
 import {
   Tooltip,
   Whisper,
@@ -20,7 +20,7 @@ import { AuthContext } from "../../../context/AuthContext";
 
 interface SidebarModulesProps {
   type: "dashboard" | "modules";
-  routerNavigate: (router:string) => void;
+  routerNavigate: (router: string) => void;
 }
 
 type moduleContent = {
@@ -42,7 +42,7 @@ type menuContent = {
   menu_order: number;
   menu_slug: string | null;
   menu_icon: string;
-  sub_menus: Record<string,any>;
+  sub_menus: Record<string, any>;
   sub_menu_id: number | null;
   sub_menu_text_name: string;
   sub_menu_type_client_fk_user_type_id: number | null;
@@ -56,7 +56,7 @@ type menuContent = {
 const SidebarModules = ({ ...props }: SidebarModulesProps) => {
   const navigate: NavigateFunction = useNavigate();
   const [isClosed, setIsClosed] = useState<boolean>(false);
-  const [isClosedMenu, setIsClosedMenu]  = useState<boolean>(false);
+  const [isClosedMenu, setIsClosedMenu] = useState<boolean>(false);
   const [moduleDestini, setModuleDestini] = useState<string>("");
   const isLocation: string = location.pathname.split("/").slice(-1).toString();
   const [modules, setModules] = useState<moduleContent>([]);
@@ -64,7 +64,7 @@ const SidebarModules = ({ ...props }: SidebarModulesProps) => {
   const [subMenus, setSubMenus] = useState<[]>([]);
   const [moduleUrl, setModuleUrl] = useState('')
   const [toogle, setToogle] = useState<string>('fas fa-chevron-left fa-lg toogle')
-  
+
 
   // useEffect
   useEffect(() => {
@@ -79,9 +79,9 @@ const SidebarModules = ({ ...props }: SidebarModulesProps) => {
 
   // functions
   const resizeSidebar = () => {
-    if(!isClosed) {
+    if (!isClosed) {
       setToogle('fas fa-chevron-right fa-lg toogle')
-    }else {
+    } else {
       setToogle('fas fa-chevron-left fa-lg toogle')
     }
     setIsClosed(!isClosed);
@@ -107,31 +107,31 @@ const SidebarModules = ({ ...props }: SidebarModulesProps) => {
     for (const i in modules) {
       const moduleData = modules[i];
       outputModules.push(
-        <div
-          className="module-box"
-          onClick={() => navigate(`${moduleData.module_slug}`)}
-          key={moduleData.module_id}
+        <Whisper
+          followCursor
+          speaker={<Tooltip>{moduleData.module_text_name}</Tooltip>}
         >
-          <Whisper
-            followCursor
-            speaker={<Tooltip>{moduleData.module_text_name}</Tooltip>}
+          <div
+            className="module-box"
+            onClick={() => navigate(`${moduleData.module_slug}`)}
+            key={moduleData.module_id}
           >
             <i
               style={{ color: "#FFFFFF" }}
               className={moduleData.module_icon}
             ></i>
-          </Whisper>
-        </div>
+          </div>
+        </Whisper>
       );
     }
     return outputModules;
   };
 
-  const isRenderSubMenus = (data:any) => {
+  const isRenderSubMenus = (data: any) => {
     const output: any = [];
-    for(let i in data){
+    for (let i in data) {
       output.push(
-        <li key={i}  onClick={() => props.routerNavigate(`/dashboard/${moduleUrl}/${data[i].sub_menu_slug}`)}>
+        <li key={i} onClick={() => props.routerNavigate(`/dashboard/${moduleUrl}/${data[i].sub_menu_slug}`)}>
           <a>
             {data[i].sub_menu_text_name}
           </a>
@@ -146,26 +146,26 @@ const SidebarModules = ({ ...props }: SidebarModulesProps) => {
     const output: any = [];
     for (let i in menus) {
       const itensMenu = menus[i];
-      if(itensMenu.sub_menus.length >= 1){
+      if (itensMenu.sub_menus.length >= 1) {
         output.push(
           <>
-          <div onClick={() => openSubMenu()} className="icon-link">
-            <li key={i} className="nav-link">
-              <a>
-                <i className={itensMenu.menu_icon}></i>
-                <div className="menu-icon-text">
-                  <span className="text">{itensMenu.menu_text_name}</span>
-                  <i className="fas fa-angle-down"></i>
-                </div>
-              </a>
-            </li>
-          </div>
-          <ul className="sub-menu">
-          {isRenderSubMenus(itensMenu.sub_menus)}
-          </ul>
+            <div onClick={() => openSubMenu()} className="icon-link">
+              <li key={i} className="nav-link">
+                <a>
+                  <i className={itensMenu.menu_icon}></i>
+                  <div className="menu-icon-text">
+                    <span className="text">{itensMenu.menu_text_name}</span>
+                    <i className="fas fa-angle-down"></i>
+                  </div>
+                </a>
+              </li>
+            </div>
+            <ul className="sub-menu">
+              {isRenderSubMenus(itensMenu.sub_menus)}
+            </ul>
           </>
         )
-      }else {
+      } else {
         output.push(
           <>
             <li key={itensMenu.menu_id} className="nav-link" onClick={() => props.routerNavigate(`/dashboard/${moduleUrl}/${itensMenu.menu_slug}`)}>
