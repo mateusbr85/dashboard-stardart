@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { ButtonToolbar, Col, Container, Content, Divider, IconButton, Panel, Row, Modal, Button } from "rsuite"
+import { ButtonToolbar, Col, Container, Content, Divider, IconButton, Panel, Row, Modal, Button, Placeholder } from "rsuite"
 import PlusIcon from '@rsuite/icons/Plus';
 import { Axios } from "../../utils/axios";
 import { toast, ToastContainer } from 'react-toastify';
@@ -22,7 +22,8 @@ const Browserlize = ({ ...props }: Props) => {
             totalPages: number;
             totalItems: number;
         },
-        registros: [{}]
+        registros: [{}],
+        schema: Record<string,any>
     }>({
         pagination: {
             currentPage: 0,
@@ -30,7 +31,8 @@ const Browserlize = ({ ...props }: Props) => {
             totalPages: 0,
             totalItems: 0,
         },
-        registros: [{}]
+        registros: [{}],
+        schema: {}
     })
     const [open, setOpen] = useState(false);
     const [modalBody, setModalBody] = useState<{
@@ -99,7 +101,7 @@ const Browserlize = ({ ...props }: Props) => {
     return (<>
         <Modal
             open={open}
-            backdrop="static" 
+            backdrop="static"
             role="alertdialog"
             size="md"
         >
