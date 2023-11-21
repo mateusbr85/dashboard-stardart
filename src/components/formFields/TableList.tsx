@@ -59,11 +59,12 @@ const TableList = ({ ...props }: TableProps) => {
                     .value()
             );
             for (const i in sortData) {
-                const widthIs = fieldSchema[i].width * 50
+                const widthIs = fieldSchema[i].width * 80
                 switch (fieldSchema[i].type) {
                     case 'text':
                         output.push(
                             <Column
+                                align='center'
                                 resizable
                                 width={widthIs}
                             >
@@ -101,8 +102,8 @@ const TableList = ({ ...props }: TableProps) => {
     }
 
     const renderActions = (rowData: Record<string, ISchema>, rowIndex: any) => {
-        return(<div style={{display: 'flex'}}>
-            <i className="fas text-warning fa-fw mr-2 clickable fa-pencil-alt" ></i>
+        return(<div>
+            <i style={{cursor: 'pointer'}} className="fas text-warning fa-fw mr-2 clickable fa-pencil-alt" ></i>
         </div>)
     }
 
@@ -120,10 +121,12 @@ const TableList = ({ ...props }: TableProps) => {
                 data={dataTable}
                 hover
                 // width={}
+                height={400}
+                cellBordered
                 renderEmpty={() => <div className="rs-table-body-info">Nenhum item encontrado.</div>}
             >
                 {renderColumns()}
-                <Column flexGrow={1} fixed='right' width={10}>
+                <Column align='center' flexGrow={1}>
                     <HeaderCell>Ações</HeaderCell>
                     <Cell className="link-group">
                         {(rowData: any, rowIndex: any) => {
