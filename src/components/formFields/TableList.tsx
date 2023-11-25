@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Col, Panel, Placeholder, Table, Toggle } from 'rsuite';
-import lodash from 'lodash';
+import _ from 'lodash';
 import { IGlobals, ISchema } from '../interfaces/TableList'
 
 
@@ -52,15 +52,15 @@ const TableList = ({ ...props }: TableProps) => {
         const output: JSX.Element[] = [];
         const fieldSchema: Record<string, ISchema> = props.data.schema['$GLOBALS']?.fields
         if (fieldSchema !== undefined) {
-            const sortData = lodash.fromPairs(
-                lodash.chain(fieldSchema)
+            const sortData = _.fromPairs(
+                _.chain(fieldSchema)
                     .toPairs()
                     .sortBy(([, value]) => value.order)
                     .value()
             );
-            for (const i in sortData) {
-                const widthIs = fieldSchema[i].width * 80
-                switch (fieldSchema[i].type) {
+            for (const column in sortData) {
+                const widthIs = fieldSchema[column].width * 80
+                switch (fieldSchema[column].type) {
                     case 'text':
                         output.push(
                             <Column
@@ -68,8 +68,8 @@ const TableList = ({ ...props }: TableProps) => {
                                 resizable
                                 width={widthIs}
                             >
-                                <HeaderCell>{fieldSchema[i].label}</HeaderCell>
-                                <Cell dataKey={i} />
+                                <HeaderCell>{fieldSchema[column].label}</HeaderCell>
+                                <Cell dataKey={column} />
                             </Column>
                         )
                         break;
@@ -80,7 +80,7 @@ const TableList = ({ ...props }: TableProps) => {
                                 align='center'
                                 width={widthIs}
                             >
-                                <HeaderCell>{fieldSchema[i].label}</HeaderCell>
+                                <HeaderCell>{fieldSchema[column].label}</HeaderCell>
                                 <Cell>
                                     {(rowData: any, index: any) => {
                                         return (<>
@@ -88,13 +88,54 @@ const TableList = ({ ...props }: TableProps) => {
                                                 size='sm'
                                                 readOnly
                                                 checkedChildren="SIM" unCheckedChildren="NÃO"
-                                                defaultChecked={rowData[i]}
+                                                defaultChecked={rowData[column]}
                                             />
                                         </>)
                                     }}
                                 </Cell>
                             </Column>
                         )
+                        break;
+                    case 'select':
+                        output.push(
+                            <Column
+                                resizable
+                                align='center'
+                                width={widthIs}
+                            >
+                                <HeaderCell>{fieldSchema[column].label}</HeaderCell>
+                                <Cell>
+                                    {(rowData: any, index: any) => {
+                                        const ObjectLabel: any = column.split('_fk_').pop()?.split('_id').shift();
+                                        if (column.includes('_fk_')) {
+                                            if (rowData[`${ObjectLabel}`]) {
+                                                const dataInSelect = rowData[`${ObjectLabel}`]
+                                                console.log(fieldSchema[column])
+                                                if (fieldSchema[column]?.displayLabel) {
+                                                    return (<>
+                                                        {dataInSelect[`${fieldSchema[column].displayLabel}`]}
+                                                    </>)
+                                                } else {
+                                                    return (<>
+                                                        {dataInSelect[`${ObjectLabel}_text_name`]}
+                                                    </>)
+                                                }
+                                            } else {
+                                                return (<>
+                                                    Nenhum
+                                                </>)
+                                            }
+                                        }
+                                        if(column.includes('_ik_')){
+                                            return (<>
+                                                {rowData[column]}
+                                            </>)
+                                        }
+                                    }}
+                                </Cell>
+                            </Column>
+                        )
+
                 }
             }
         }
@@ -102,8 +143,8 @@ const TableList = ({ ...props }: TableProps) => {
     }
 
     const renderActions = (rowData: Record<string, ISchema>, rowIndex: any) => {
-        return(<div>
-            <i style={{cursor: 'pointer'}} className="fas text-warning fa-fw mr-2 clickable fa-pencil-alt" ></i>
+        return (<div>
+            <i style={{ cursor: 'pointer' }} className="fas text-warning fa-fw mr-2 clickable fa-pencil-alt" ></i>
         </div>)
     }
 
@@ -122,11 +163,11 @@ const TableList = ({ ...props }: TableProps) => {
                 hover
                 // width={}
                 height={400}
-                cellBordered
+                // cellBordered
                 renderEmpty={() => <div className="rs-table-body-info">Nenhum item encontrado.</div>}
             >
                 {renderColumns()}
-                <Column align='center' flexGrow={1}>
+                <Column align='center' fixed='right' flexGrow={1}>
                     <HeaderCell>Ações</HeaderCell>
                     <Cell className="link-group">
                         {(rowData: any, rowIndex: any) => {

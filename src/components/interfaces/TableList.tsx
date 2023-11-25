@@ -31,6 +31,7 @@ export interface ISchema {
     options?: Array<string> | ISelectOptions;
     default?: string | number;
     label?: string;
+    displayLabel: string;
     placeholder?: string;
     readonly?: boolean;
     required?: boolean;
